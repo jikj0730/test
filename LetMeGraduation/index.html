@@ -148,9 +148,35 @@
                     </tbody>
                 </table>
     </section>
-
+<!--
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="elective">
     <hr class="m-5">
+    <table class="t2" id="append_table">
+    <colgroup>
+    <col style="width:70px">
+    <col style="width:200px">
+    <col style="width:300px">
+    <col style="width:200px">
+    </colgroup>
+
+    <thead>
+    <tr>
+        <th><label for="add_no">폐강과목</label></th>
+        <th>대체과목</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input type="text" id="add_no"></td>
+        <td><input type="text" id="add_name"></td>
+        <td><button type="button" id="append_row">데이터 추가</button></td>
+    </tr>
+    </tbody>
+
+    </table>
+
         <h2 class="mb-5">대체과목 리스트</h2>
         <div class="mb-5">
         <table class="t2" id="list_table">
@@ -173,39 +199,65 @@
                 </tbody>
             </table>
         </div>
-                        
-            <h3>대체과목 추가</h3>
-
-            <table border="1" id="append_table">
-            <colgroup>
-            <col style="width:70px">
-            <col style="width:200px">
-            <col style="width:300px">
-            <col style="width:200px">
-            </colgroup>
-
-            <thead>
-            <tr>
-                <th><label for="add_no">폐강과목</label></th>
-                <th>대체과목</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-                <td><input type="text" id="add_no"></td>
-                <td><input type="text" id="add_name"></td>
-                <td><button type="button" id="append_row">데이터 추가</button></td>
-            </tr>
-            </tbody>
-
-            </table>
+          
         </div>
         
     </section>
 
+-->
 
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="elective">
+    <hr class="m-5">
+    <table class="t2" id="append_table" style="float:left">
+    <thead>
+        <tr>
+            <th style="text-align:center" colspan="4">신청 가능 과목</th>
+        </tr>
+        <tr style="border-bottom : bold">
+            <td><label for="add_no">과목코드</label></td>
+            <td>과목</td>
+            <td>과목구분</td>
+            <td>추가</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input style="width: 100px;" type="text" id="add_no"></td>
+        <td><input style="width: 100px;" type="text" id="add_name"></td>
+        <td><input style="width: 100px;" type="text" id="add_list"></td>        
+        <td><button style="width: 100px;" type="button" id="append_row">데이터 추가</button></td>
+    </tr>
+    </tbody>
+
+    </table>
+        <table class="t2" id="list_table" style="float:right">
+                <thead>
+                     <tr>
+                        <th style="text-align:center" colspan="4">신청한 과목</th>
+                    </tr>
+                    <tr>
+                        <th>과목코드</th>
+                        <th>과목</th>
+                        <th>과목구분</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>과목1</td>
+                        <td>과목2</td>
+                        <td>과목</td>
+                        <td>
+                            <a href="#" class="delete-link">Delete</a>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+          
+        </div>
+        
+    </section>
 
     <hr class="m-0">
     </section>

@@ -40,9 +40,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">학생조회</a>
-            </li>
                <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#major_replace">대체과목 관리</a>
             </li>
@@ -54,23 +51,47 @@
 </nav>
 
 <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="elective">
-        <hr class="m-5">
-            <h2 class="mb-5">대체과목 리스트</h2>
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="major_replace">
+        <h2 class="mb-5">대체과목 리스트</h2>
+        
+        <table  class="t2"  style="width:47%; float:left;" id="append_table">
+                <thead>
+                <tr>
+                     <th style="text-align:center" colspan="4">신청 가능 과목</th>
+                </tr>
+                <tr>
+                    <th><label for="add_no">과목코드</label></th>
+                    <td>과목</td>
+                    <td>과목구분</td>
+                    <td>추가</td>
+                </tr>
+                </thead>
+    
+                <tbody>
+                <tr>
+                    <td><input style="width:100px" type="text" id="add_no"></td>
+                    <td><input style="width:100px" type="text" id="add_name"></td>
+                    <td><input style="width:100px" type="test" id="add_list"></td>
+                    <td><button type="button" id="append_row" style="width:100px; border:none; background-color: white; color: tomato">데이터 추가</button></td>
+                </tr>
+                </tbody>
+    
+        </table>
             <div class="mb-5">
-            <table class="t2" id="list_table">
+            <table  class="t2" id="list_table" style="width:47% ;float:right">
                     <thead>
                         <tr>
-                            <th>폐강과목</th>
-                            <th>대체과목</th>
+                            <th>과목코드</th>
+                            <th>과목</th>
+                            <th>과목구분</th>
                             <th>삭제</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>과목1</td>
-                            <td>과목2</td>
+                           <td>GC00022</td>
+                            <td>국제정치론</td>
+                            <td>전공선택</td>
                             <td>
                                 <a href="#" class="delete-link">Delete</a>
                             </td>
@@ -79,66 +100,79 @@
                     </tbody>
                 </table>
             </div>
-                            
-                <h3>대체과목 추가</h3>
-    
-                <table border="1" id="append_table">
-                <colgroup>
-                <col style="width:70px">
-                <col style="width:200px">
-                <col style="width:300px">
-                <col style="width:200px">
-                </colgroup>
-    
-                <thead>
-                <tr>
-                    <th><label for="add_no">폐강과목</label></th>
-                    <th>대체과목</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-    
-                <tbody>
-                <tr>
-                    <td><input type="text" id="add_no"></td>
-                    <td><input type="text" id="add_name"></td>
-                    <td><button type="button" id="append_row">데이터 추가</button></td>
-                </tr>
-                </tbody>
-    
-                </table>
+
             </div>
-            
         </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="elective">
+
+
+
+
+
+
+
+
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="major_check">
     <hr class="m-5">
         <h2 class="mb-5">대체과목 리스트</h2>
-        <div class="mb-5">
-        <table class="t2" id="list_table">
-                <thead>
+        <div class="mb-5" >
+        <table class="t2"  id="append_table" style="width:47%; float:left" >
+                <thead style="border-bottom : 2px">
                     <tr>
-                        <th>폐강과목</th>
-                        <th>대체과목</th>
-                        <th>삭제</th>
+                        <th style="text-align:center" colspan="4">신청 가능 과목</th>
+                    </tr>
+                    <tr>
+                        <td>과목코드</td>
+                        <td>과목</td>
+                        <td>과목구분</td>
+                        <td>추가</td>
                     </tr>
                 </thead>
+                
                 <tbody>
                     <tr>
-                        <td>과목1</td>
-                        <td>과목2</td>
-                        <td>
-                            <a href="#" class="delete-link">Delete</a>
-                        </td>
+                        <td style="widows: 50px;"><input style="widows: 50px;" type="text" id="add_no"></td>
+                        <td style="widows: 50px;"><input style="widows: 50px;" type="text" id="add_name"></td>
+                        <td><input type="text" id="add_list"></td>
+                        <td><button type="button" id="append_row">데이터 추가</button></td>
                     </tr>
                    
                 </tbody>
             </table>
+            
+
+            <table class="t2" id="list_table" style="width:47% ;float:right">
+                    <thead style="border-bottom : 2px">
+                        <tr>
+                            <th style="text-align:center" colspan="4">신청한 과목</th>
+                        </tr>
+                        <tr>
+                            <td label for="add_no">과목코드</td>
+                            <td>과목</td>
+                            <td>과목구분</td>
+                            <td>삭제</td>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>GC00022</td>
+                            <td>국제정치론</td>
+                            <td>전공선택</td>
+                            <td>
+                                <a href="#" class="delete-link">Delete</a>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
         </div>
                         
             <h3>대체과목 추가</h3>
 
-            <table border="1" id="append_table">
+            <table style="border:1px" id="append_table">
             <colgroup>
             <col style="width:70px">
             <col style="width:200px">
