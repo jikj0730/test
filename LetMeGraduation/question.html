@@ -1,1 +1,175 @@
 <!--문의사항-->
+<!--예외사항신청-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>졸업시켜조 - 졸업요건</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="student.html">
+        <span class="d-block d-lg-none">홍길동</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#board">질문 게시판</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#my_board">내 질문</a>
+            </li>                       
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="board">
+            <h2 class="mb-0">질문게시판 &nbsp; 
+                    <span class="text-primary">
+                        <a data-target="#layerpop_e1" data-toggle="modal">
+                            <button class="btn btn-default" >글쓰기</button>
+                        </a>
+                    </span>
+                </h2>
+                    <div class="modal fade" id="layerpop_e1" >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- header -->
+                            <div class="modal-header">
+                                <!-- header title -->
+                                <h4>게시판 글쓰기</h4>
+                            </div>
+                            <br/>
+                            <!-- body -->
+                            <div class="container">
+                                <form style="padding: 10px"method="post" modelAttribute="student">  
+                                  <div class="form-group">
+                                    <label>제목:</label>
+                                    <input path="title"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <label>내용:</label>
+                                    <br/>
+                                    <textarea name="content" cols="40" rows="8" ></textarea>
+                                  </div>
+                                  <br/>
+                                  <div>
+                                    <button type="submit" class="btn btn-primary">
+                                      <span class="glyphicon glyphicon-ok"></span> 저장</button>
+                                    
+                                      <a href="delete?id=${ student.id }" class="btn btn-danger" data-confirm-delete>
+                                        <i class="glyphicon glyphicon-remove"></i> 삭제</a>
+
+                                    <a href="list" class="btn btn-info">목록으로</a>
+                                  </div>
+                                </form>
+                              </div>
+                            </ul>
+                            <br/>
+                            <!-- Footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+        <table  class="q_t" id="append_table">
+                <thead>
+                <tr>
+                     <th style="text-align:center" colspan="4">리스트</th>
+                </tr>
+                <tr>
+                    <th><label for="add_no">번호</label></th>
+                    <td>제목</td>
+                    <td>글쓴이</td>
+                    <td>답변</td>
+                </tr>
+                </thead>
+    
+                <tbody>
+                <tr>
+                    <td id="add_no"></td>
+                    <td id="add_name"></td>
+                    <td id="add_list"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+    
+        </table>
+        </div>
+        <hr class="m-5">
+
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="my_board">
+            <h2 class="mb-5">내 질문</h2>
+            
+            <table class="q_t"  id="append_table">
+                    <thead>
+                    <tr>
+                         <th style="text-align:center" colspan="4">리스트</th>
+                    </tr>
+                    <tr>
+                        <th><label for="add_no">번호</label></th>
+                        <td>제목</td>
+                        <td>글쓴이</td>
+                        <td>답변</td>
+                    </tr>
+                    </thead>
+        
+                    <tbody>
+                    <tr>
+                        <td id="add_no"></td>
+                        <td id="add_name"></td>
+                        <td id="add_list"></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+        
+            </table>
+        </section>
+
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/resume.min.js"></script>
+
+</body>
+
+</html>

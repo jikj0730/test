@@ -1,1 +1,156 @@
-<!--졸업조건별 조회페이지-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>졸업시켜조 - 졸업요건</title>
+
+     <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+	
+	<style>
+	table {
+   		width: 800px;
+   		text-align: center;
+  		vertical-align: middle;
+	}
+	
+  </style>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="student.html">
+        <span class="d-block d-lg-none">홍길동</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+    </div>
+</nav>
+
+<div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto" >
+            <h2 class="mb-0">졸업조건 조회</h2>
+           	<br/>
+            <form class="form-inline">
+  				<div class="form-group">
+   			 	<label>학번 &nbsp;</label>
+   			 	
+    				<select name="departmentId" class="form-control">
+      				<option>학번선택</option>
+    			 	<option>2018 이후</option>
+      				<option>2018 이전</option>
+    				</select>
+  				</div> 
+  				&nbsp;
+  				<input type="button" value="조회" style="float: right;">
+			</form>
+			<br/>
+				<div>
+					<h4>1.&nbsp; 2017학번 까지의 졸업학점은 130학점으로 교양학점(32학점 이상)과 전공학점(60학점 이상), 
+			   	     	 특별과정학점(15학점 이상)으로 구성됩니다.</h4>
+					<br/>
+					<h4>2.&nbsp; 2018학번부터의 졸업학점은 130학점으로 교양학점(34학점 이상)과 전공학점(60학점이상~63학점 이상),
+			        	 전공탐색(18학점 이상)으로 구성 됩니다. </h4>
+				</div>
+				<br/>
+				<div>
+					<table style="border: solid black 2px;">
+                	    <thead style="border: solid black 1px;">
+                 	       <tr>
+                           	 <th>구분</th>
+                           	 <th>총 취득학점</th>
+                     	   </tr>
+                    	</thead>
+                    	<tbody style="border:solid black 1px;">
+                   		 <tr>
+                     	   <td >1학년 수료</td>
+                     	   <td>34학점 이상</td>
+                 		</tr>
+                    	<tr>
+                       		<td >2학년 수료</td>
+                        	<td>68학점 이상</td>
+                   		</tr>
+                    	<tr>
+                        	<td >3학년 수료</td>
+                        	<td>102학점 이상</td>
+                    	</tr>
+                    	<tr>
+                        	<td >4학년 수료</td>
+                        	<td>130학점 이상</td>
+                    	</tr>
+                    	</tbody>
+                	</table>
+                </div>
+	            <br/>
+	            
+	            <div class="resume-content mr-auto">
+                <br/>
+                <a data-target="#layerpop_1" data-toggle="modal">
+                        <button class="mb-0" type="button" style="float: right;">수정 </button>
+                </a>
+
+                <div class="modal fade" id="layerpop_1" >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- header -->
+                            <div class="modal-header">
+                                <!-- header title -->
+                                <h4>내용 수정</h4>
+                            </div>
+                            <!-- body -->
+                            <ul class="fa-ul mb-0">
+                            <input type="text" id="modifyName" name="modifyName" />
+                            </ul>
+                            <!-- Footer -->
+                            <br/>
+                            <div class="modal-footer">
+                            	<button type="button" data-dismiss="modal">취소</button>
+		       					<button type="button" id="btn_modify">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+	            
+                </div>
+            </section>
+            
+            
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/resume.min.js"></script>
+
+
+</html>

@@ -251,15 +251,16 @@ color : #6c757d;
     0%{ width: 0; }
 }
 
-button.btn{
-    height  : 9rem;
-    width   : 9rem;
-}
 
 .t2{
     border: 1px solid gray;
     width: 500px;
     height: 500px;
+}
+
+.q_t{
+    border:  1px solid gray;
+    
 }
 td,th{
     border: solid black 1px;

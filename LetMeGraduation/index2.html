@@ -57,9 +57,58 @@
             </h2>
             <div class="subheading mb-0">12345 · 관리자 ·
                 <a href="mailto:jih9306@gmail.com">12345@skhu.ac.kr</a> &nbsp;
-                <button>수정</button>
-                <button>초대</button>
-            </div>
+                <a data-target="#layerpop_sm1" data-toggle="modal">
+                    <button class="btn btn-default" >수정</button>
+                </a>
+
+                <div class="modal fade" id="layerpop_sm1" >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- header -->
+                            <div class="modal-header">
+                                <!-- header title -->
+                                <h4>관리자 수정</h4>
+                            </div>
+                            <br/>
+                            <!-- body -->
+                            <div class="container">
+                                <form method="post" modelAttribute="student">  
+                                  <div class="form-group">
+                                    <label>교직원번호:</label>
+                                    <input path="studentNumber" class="form-control w200"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <label>이름:</label>
+                                    <input path="name" class="form-control w200" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label>메일</label>
+                                    <input path="email" class="form-control w200" />
+                                  </div>
+                                  <br/>
+                                  <div>
+                                    <button type="submit" class="btn btn-primary">
+                                      <span class="glyphicon glyphicon-ok"></span> 저장</button>
+                                    
+                                      <a href="delete?id=${ student.id }" class="btn btn-danger" data-confirm-delete>
+                                        <i class="glyphicon glyphicon-remove"></i> 삭제</a>
+
+                                    <a href="list" class="btn btn-info">목록으로</a>
+                                  </div>
+                                </form>
+                              </div>
+                            </ul>
+                            <br/>
+                            <!-- Footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+
+                <button class="btn btn-default" >초대</button>
+                </div>
                 <div class="subheading mb-3">인문융합 자율학부</div>
                 <ul class="fa-ul mb-0">
                     <li><a class="js-scroll-trigger" href="#major_search">
