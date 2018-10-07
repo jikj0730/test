@@ -53,63 +53,58 @@
 <div class="container-fluid p-0">
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="major_replace">
         <h2 class="mb-5">대체과목 리스트</h2>
-        
-        <table  class="t2"  style="width:47%; float:left;" id="append_table">
-                <thead>
-                <tr>
-                     <th style="text-align:center" colspan="4">신청 가능 과목</th>
-                </tr>
-                <tr>
-                    <th><label for="add_no">과목코드</label></th>
-                    <td>과목</td>
-                    <td>과목구분</td>
-                    <td>추가</td>
-                </tr>
-                </thead>
-    
-                <tbody>
-                <tr>
-                    <td><input style="width:100px" type="text" id="add_no"></td>
-                    <td><input style="width:100px" type="text" id="add_name"></td>
-                    <td><input style="width:100px" type="test" id="add_list"></td>
-                    <td><button type="button" id="append_row" style="width:100px; border:none; background-color: white; color: tomato">데이터 추가</button></td>
-                </tr>
-                </tbody>
-    
-        </table>
-            <div class="mb-5">
-            <table  class="t2" id="list_table" style="width:47% ;float:right">
-                    <thead>
-                        <tr>
-                            <th>과목코드</th>
-                            <th>과목</th>
-                            <th>과목구분</th>
-                            <th>삭제</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                           <td>GC00022</td>
-                            <td>국제정치론</td>
-                            <td>전공선택</td>
-                            <td>
-                                <a href="#" class="delete-link">Delete</a>
-                            </td>
-                        </tr>
-                       
-                    </tbody>
-                </table>
-            </div>
-
-            </div>
-        </section>
-
-
-    <hr class="m-0">
+        <div class="row">
+	        <div class="col-mb-4">
+	       		 <table  class="table table-bordered" id="append_table" style="width:300px;height:150px; margin:10px">
+	                <thead>
+	                <tr>
+	                     <th style="text-align:center" colspan="4">신청 가능 과목</th>
+	                </tr>
+	                <tr>
+	                    <th><label for="add_no">과목코드</label></th>
+	                    <td>과목</td>
+	                    <td>과목구분</td>
+	                    <td>추가</td>
+	                </tr>
+	                </thead>
+	    
+	                <tbody>
+	                <tr>
+	                    <td><input style="width:100px" type="text" id="add_no"></td>
+	                    <td><input style="width:100px" type="text" id="add_name"></td>
+	                    <td><input style="width:100px" type="test" id="add_list"></td>
+	                    <td><button type="button" id="append_row" style="width:100px; border:none; background-color: white; color: tomato">데이터 추가</button></td>
+	                </tr>
+	                </tbody>
+	    
+	        </table>
+	        </div>
+	        <div class="col-mb-8">
+	            <table class="table table-bordered table-hover" id="list_table" style="width:500px; margin:10px">
+	                    <thead>
+	                        <tr>
+	                            <th>과목코드</th>
+	                            <th>과목</th>
+	                            <th>과목구분</th>
+	                            <th>삭제</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                           <td>GC00022</td>
+	                            <td>국제정치론</td>
+	                            <td>전공선택</td>
+	                            <td>
+	                                <a href="#" class="delete-link">Delete</a>
+	                            </td>
+	                        </tr>
+	                       
+	                    </tbody>
+	                </table>
+			</div>
+		</div>
+            
     </section>
-
-    <hr class="m-0">
-
 
 </div>
 
